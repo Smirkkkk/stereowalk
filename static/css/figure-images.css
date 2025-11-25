@@ -1,0 +1,131 @@
+/* Custom styles for research figure images */
+
+/* Figure Image Container */
+.figure-image-wrapper {
+    position: relative;
+    width: 100%;
+    margin: 2rem auto;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.figure-image {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: zoom-in;
+    display: block;
+    margin: 0 auto;
+}
+
+.figure-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.15);
+}
+
+/* Teaser section styling */
+.teaser-section {
+    background: white;
+    padding: 3rem 1.5rem;
+}
+
+.teaser-section .title {
+    margin-bottom: 2rem;
+    color: #1e293b;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+/* Figure caption styling */
+.figure-caption {
+    margin-top: 2rem;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #374151;
+}
+
+.figure-caption strong {
+    color: #1e293b;
+    font-weight: 600;
+}
+
+/* Method section */
+.figure-section {
+    padding: 4rem 1.5rem;
+}
+
+.figure-section .title {
+    margin-bottom: 2rem;
+    color: #1e293b;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+/* Results section with light background */
+.figure-section.is-light {
+    background: #f8fafc;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .figure-image-wrapper {
+        margin: 1rem auto;
+    }
+    
+    .figure-section {
+        padding: 2rem 1rem;
+    }
+    
+    .hero.teaser .title,
+    .figure-section .title {
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .figure-image-wrapper {
+        max-width: 900px;
+    }
+}
+
+/* Loading animation for images */
+.figure-image-wrapper img {
+    opacity: 0;
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Optional: Add a zoom modal for full-screen view */
+.figure-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    cursor: zoom-out;
+}
+
+.figure-modal img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 95%;
+    max-height: 95%;
+    border-radius: 8px;
+}
+
+.figure-modal.active {
+    display: block;
+    animation: fadeIn 0.3s ease-out;
+}
