@@ -16,11 +16,11 @@ def main():
     
     # 启动服务器
     print("🚀 Live Server 启动中...")
-    print("📝 访问: http://localhost:5500")
+    print("📝 访问: http://localhost:8080")
     print("✨ 文件改动后会自动刷新浏览器")
     print("⌨️  按 Ctrl+C 停止服务器")
     
-    server.serve(port=5500, host='localhost', root='.')
+    server.serve(port=8080, host='localhost', root='.')
 
 if __name__ == '__main__':
     main()
